@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leslie C. - Office Assistant/Receptionist | PCS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #FF4438;
+      --dark: #171b25;
+      --highlight: #FFFF04;
+      --white: #FFFFFF;
+      --gray-50: #F8FAFB;
+      --gray-100: #F1F5F4;
+      --gray-200: #E2E8E7;
+      --gray-400: #94A3A0;
+      --gray-600: #4B5E5A;
+      --gray-700: #374845;
+      --font-heading: 'Poppins', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+    body { font-family: var(--font-body); background: var(--gray-50); color: var(--dark); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .back-link { display: block; background: var(--dark); padding: 12px 40px; font-family: var(--font-heading); font-size: 14px; font-weight: 500; }
+    .back-link a { color: var(--highlight); text-decoration: none; transition: color 0.2s; }
+    .back-link a:hover { color: var(--white); }
+    .back-link a::before { content: "\2190\00a0\00a0"; }
+    header { background: var(--dark); padding: 48px 40px 52px; position: relative; overflow: hidden; }
+    header::after { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--primary), var(--highlight)); }
+    .header-brand { font-family: var(--font-heading); font-size: 32px; font-weight: 700; color: var(--white); letter-spacing: -0.5px; margin-bottom: 4px; }
+    .header-brand span { color: var(--highlight); }
+    .header-subtitle { font-family: var(--font-body); font-size: 14px; font-weight: 400; color: var(--gray-400); text-transform: uppercase; letter-spacing: 2px; }
+    .candidate-banner { background: linear-gradient(135deg, var(--primary), #FFFF04); padding: 36px 40px; color: var(--white); }
+    .candidate-name { font-family: var(--font-heading); font-size: 28px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 6px; }
+    .candidate-title { font-size: 16px; font-weight: 400; opacity: 0.9; margin-bottom: 12px; }
+    .candidate-contact { display: flex; flex-wrap: wrap; gap: 20px; font-size: 13px; opacity: 0.85; }
+    .resume-body { max-width: 900px; margin: 0 auto; padding: 40px 40px 60px; }
+    .section { margin-bottom: 36px; }
+    .section-title { font-family: var(--font-heading); font-size: 18px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1.5px; padding-bottom: 10px; border-bottom: 2px solid var(--gray-200); margin-bottom: 18px; }
+    .summary-text { font-size: 15px; color: var(--gray-700); line-height: 1.75; }
+    .skills-grid { display: grid; grid-template-columns: 170px 1fr; gap: 10px 20px; font-size: 14px; }
+    .skill-label { font-weight: 600; color: var(--dark); padding: 4px 0; }
+    .skill-value { color: var(--gray-600); padding: 4px 0; line-height: 1.6; }
+    .experience-item { margin-bottom: 24px; padding-left: 20px; border-left: 3px solid var(--primary); }
+    .experience-item:last-child { margin-bottom: 0; }
+    .exp-header { margin-bottom: 8px; }
+    .exp-role { font-family: var(--font-heading); font-size: 16px; font-weight: 700; color: var(--dark); }
+    .exp-company { font-size: 14px; font-weight: 500; color: var(--primary); }
+    .exp-meta { font-size: 13px; color: var(--gray-400); margin-top: 2px; }
+    .exp-desc { font-size: 14px; color: var(--gray-600); line-height: 1.65; }
+    .exp-bullets { font-size: 14px; color: var(--gray-600); line-height: 1.65; padding-left: 20px; margin-top: 6px; }
+    .exp-bullets li { margin-bottom: 4px; }
+    .education-item, .cert-item, .lang-item { font-size: 15px; margin-bottom: 8px; }
+    .edu-degree, .cert-name { font-weight: 600; color: var(--dark); }
+    .edu-school { color: var(--primary); font-weight: 500; }
+    .edu-year { font-size: 13px; color: var(--gray-400); }
+    footer { background: var(--dark); padding: 32px 40px; text-align: center; position: relative; }
+    footer::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--highlight)); }
+    .footer-text { font-family: var(--font-heading); font-size: 14px; color: var(--gray-400); }
+    .footer-text strong { color: var(--white); }
+    .footer-text .accent { color: var(--highlight); }
+    .footer-sub { font-size: 12px; color: var(--gray-600); margin-top: 8px; }
+    @media (max-width: 640px) {
+      header, .candidate-banner, .resume-body, .back-link, footer { padding-left: 20px; padding-right: 20px; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .candidate-contact { flex-direction: column; gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="back-link"><a href="index.html">Back to All Candidates</a></div>
+  <header>
+    <div class="header-brand">PCS<span>.</span></div>
+    <div class="header-subtitle">Candidate Resume</div>
+  </header>
+  <div class="candidate-banner">
+    <div class="candidate-name">Leslie C.</div>
+    <div class="candidate-title">Office Assistant/Receptionist | Dominican Republic</div>
+    <div class="candidate-contact">
+      <span>Dominican Republic</span>
+      <span>8+ yrs Hospitality Management experience</span>
+    </div>
+  </div>
+  <div class="resume-body">
+    <div class="section"><div class="section-title">Professional Summary</div><p class="summary-text">Customer Support, Technical Support, and Sales Support professional with 6+ years of experience supporting SaaS platforms, digital marketplaces, and e-commerce environments. Skilled in troubleshooting technical issues, managing high volumes of customer interactions, and resolving complex support tickets across chat, email, and phone. Experienced working with CRM and helpdesk platforms such as Zendesk, Salesforce, and Shopify while maintaining high service quality and customer satisfaction. Known for strong problem-solving, organization, and collaboration in fast-paced remote environments.</p></div>
+    <div class="section"><div class="section-title">Skills &amp; Tech Stack</div><div class="skills-grid">
+    <div class="skill-label">Languages</div>
+    <div class="skill-value">Spanish – Native, English – C1 (Professional proficiency)</div>
+    <div class="skill-label">Sales &amp; Customer Engagement</div>
+    <div class="skill-value">Sales Support &amp; Upselling, Lead Qualification, Customer Engagement, Marketplace Promotions &amp; Sales Events</div>
+    <div class="skill-label">Computer Skills</div>
+    <div class="skill-value">Zendesk, Salesforce (CRM), Shopify, Google Workspace (Docs, Sheets, Calendar), Microsoft Office Suite, Slack</div>
+    <div class="skill-label">Professional Skills</div>
+    <div class="skill-value">Organization &amp; Time Management, Attention to Detail, Clear Communication, Problem Solving &amp; Analytical Skills, Adaptability in Fast-paced Environments, Task Prioritization &amp; Multitasking</div>
+    <div class="skill-label">Technical Skills</div>
+    <div class="skill-value">Tier 2 Technical Support &amp; Troubleshooting, Customer Support &amp; Customer Experience, Ticket Management &amp; Case Triage, Multichannel Support (Chat, Email, Phone), Appointment Scheduling &amp; Calendar Management, Billing, Subscription, Refunds &amp; Payment Processing, E-commerce &amp; Marketplace Support (Shopify), Process Documentation (SOPs)</div></div></div>
+    <div class="section"><div class="section-title">Work Experience</div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Technical Support Specialist (Tier 2)</div>
+        <div class="exp-company">ModSquad</div>
+        <div class="exp-meta">03/2024 – 01/2026</div>
+      </div>
+      <ul class="exp-bullets"><li>Provided Tier 2 technical support resolving complex customer issues related to accounts, orders, billing, and platform functionality through email, chat, and ticketing systems, ensuring timely resolutions and high customer satisfaction.</li><li>Maintained accurate case documentation in CRM and helpdesk systems, improving issue tracking and resolution efficiency.</li><li>Reviewed digital assets submitted by vendors prior to publication, ensuring compliance with platform policies and quality standards.</li><li>Collaborated with internal teams to address technical escalations and platform issues, supporting faster issue resolution and operational efficiency.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">E-commerce Support Specialist</div>
+        <div class="exp-company">Concentrix</div>
+        <div class="exp-meta">02/2022 – 03/2024</div>
+      </div>
+      <ul class="exp-bullets"><li>Assisted customers with order status, billing inquiries, refunds, returns, and product questions through chat and inbound calls, ensuring accurate resolutions and a positive customer experience.</li><li>Managed up to four simultaneous chat conversations in a high-volume environment, maintaining service quality and response efficiency.</li><li>Identified opportunities to upsell products and services while assisting customers, contributing to increased sales and customer engagement.</li><li>Supported marketplace sales events and promotional campaigns, helping drive customer participation and conversions.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Appointment Setter &amp; Sales Closer</div>
+        <div class="exp-company">PBSC</div>
+        <div class="exp-meta">04/2020 – 01/2022</div>
+      </div>
+      <ul class="exp-bullets"><li>Coordinated installation appointments for telecommunications services, acting as the main point of contact between customers and field technicians to ensure smooth service activation.</li><li>Managed appointment confirmations, rescheduling, and cancellations while maintaining accurate service records and scheduling systems.</li><li>Performed follow-ups with customers and technicians on pending installations, ensuring timely service completion and improved customer satisfaction.</li><li>Supported sales activities by identifying customer needs and assisting with service upgrades and new activations, contributing to increased service adoption.</li></ul>
+    </div></div>
+    <div class="section"><div class="section-title">Education</div>
+    <div class="education-item">
+      <div class="edu-degree">High School Graduate</div>
+      <div class="edu-school">Centro de Excelencia Republica de Colombia</div>
+      <div class="edu-year">08/2014 – 05/2018</div>
+    </div></div>
+    
+    <div class="section"><div class="section-title">Languages</div>
+    <div class="lang-item"><strong>Spanish:</strong> Native</div>
+    <div class="lang-item"><strong>English:</strong> C1 (Professional proficiency)</div></div>
+  </div>
+  <footer>
+    <div class="footer-text">Presented by <strong>Sagan</strong> for <strong class="accent">PCS</strong></div>
+    <div class="footer-sub">getsagan.com · Redefining Recruitment</div>
+  </footer>
+</body>
+</html>
